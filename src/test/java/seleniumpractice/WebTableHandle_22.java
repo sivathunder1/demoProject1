@@ -1,16 +1,14 @@
 package seleniumpractice;
 
 import java.io.IOException;
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
-import java.util.*;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.FluentWait;
-import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
@@ -18,7 +16,7 @@ public class WebTableHandle_22 {
 
 	WebDriver driver = new ChromeDriver();
 
-	public WebElement waitForElementToBePresent(WebDriver driver, By locator, int duration) {
+	public WebElement waitForElementToBePresent(WebDriver driver, By locator, Duration duration) {
 
 		WebDriverWait wait = new WebDriverWait(driver, duration);
 		wait.until(ExpectedConditions.presenceOfElementLocated(locator));

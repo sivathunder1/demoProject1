@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="seleniumpractice.ScreenShot_28">
+      <class name="seleniumpractice.OpenLinkInaNewTab_30">
         <methods>
-          <include name="screenShots"/>
+          <include name="toolTip_MultiWindow_Lcoations"/>
         </methods>
-      </class> <!-- seleniumpractice.ScreenShot_28 -->
+      </class> <!-- seleniumpractice.OpenLinkInaNewTab_30 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

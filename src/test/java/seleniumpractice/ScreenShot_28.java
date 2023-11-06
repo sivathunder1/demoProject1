@@ -2,13 +2,13 @@ package seleniumpractice;
 
 import java.io.File;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import org.codehaus.plexus.util.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -20,7 +20,7 @@ public class ScreenShot_28 {
 
 	WebDriver driver = new ChromeDriver();
 
-	public WebElement waitForElementToBePresent(WebDriver driver, By locator, int duration) {
+	public WebElement waitForElementToBePresent(WebDriver driver, By locator, Duration duration) {
 
 		WebDriverWait wait = new WebDriverWait(driver, duration);
 		wait.until(ExpectedConditions.presenceOfElementLocated(locator));

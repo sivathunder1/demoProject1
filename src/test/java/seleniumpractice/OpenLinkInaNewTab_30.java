@@ -14,7 +14,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
-public class MultipleWindows_ToolTip_Location_29 {
+public class OpenLinkInaNewTab_30 {
 
 	WebDriver driver = new ChromeDriver();
 
@@ -26,28 +26,29 @@ public class MultipleWindows_ToolTip_Location_29 {
 	}
 
 
+
+
 	@Test
 	public void toolTip_MultiWindow_Lcoations() throws InterruptedException, IOException {
 		//ChromeOptions options = new ChromeOptions();
 		//options.addArguments("--disable-notifications");
 		//WebDriver driver1 = new ChromeDriver();
 		driver.manage().window().maximize();
-		driver.get("https://jqueryui.com/tooltip/");
+		driver.get("https://demo.nopcommerce.com/");
 		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 		
-		driver.switchTo().frame(0);		
-		WebElement toolTip = driver.findElement(By.xpath("//input[@id='age']"));
-		String toolTipText = toolTip.getAttribute("title");
-		System.out.println("ToolTip Text : " + toolTipText);
-		Thread.sleep(2000);
+		String tab = Keys.chord(Keys.CONTROL, Keys.RETURN);
+		WebElement register = driver.findElement(By.xpath("//a[text()='Register']"));		
+		highlightElement(driver, register, "Yes");
 		
-		driver.navigate().to("https://demo.nopcommerce.com/");
-		//To open a next tab and store it in a String
-		Keys.chord(Keys.CONTROL, Keys.RETURN);
+		System.out.println("Location of the element "+ register.getLocation());
+		System.out.println("X Location of the element : "+ register.getLocation().getX());
+		System.out.println("Y Location of the element : "+ register.getLocation().getY());
 		
-		WebElement registerButton = driver.findElement(By.xpath("//a[text() = 'Register']"));
-		highlightElement(driver,registerButton,"Yes");
+		System.out.println("Width Location of the element : "+ register.getSize().getWidth());
+		System.out.println("Height Location of the element : "+ register.getSize().getHeight());
 		
+		register.sendKeys(tab);
 				
 		Thread.sleep(3000);
 

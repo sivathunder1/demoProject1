@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-11-06T02:29:30Z" name="Default suite" finished-at="2023-11-06T02:29:40Z" duration-ms="9998">
+  <suite started-at="2023-11-06T06:39:19Z" name="Default suite" finished-at="2023-11-06T06:39:34Z" duration-ms="14861">
     <groups>
     </groups>
-    <test started-at="2023-11-06T02:29:30Z" name="Default test" finished-at="2023-11-06T02:29:40Z" duration-ms="9998">
-      <class name="seleniumpractice.MultipleWindows_ToolTip_Location_29">
-        <test-method signature="toolTip_MultiWindow_Lcoations()[pri:0, instance:seleniumpractice.MultipleWindows_ToolTip_Location_29@15fc442]" started-at="2023-11-06T02:29:30Z" name="toolTip_MultiWindow_Lcoations" finished-at="2023-11-06T02:29:40Z" duration-ms="9983" status="PASS">
+    <test started-at="2023-11-06T06:39:19Z" name="Default test" finished-at="2023-11-06T06:39:34Z" duration-ms="14861">
+      <class name="seleniumpractice.UploadFile_RobotClass_34">
+        <test-method signature="toolTip_MultiWindow_Lcoations()[pri:0, instance:seleniumpractice.UploadFile_RobotClass_34@74cf8b28]" started-at="2023-11-06T06:39:19Z" name="toolTip_MultiWindow_Lcoations" finished-at="2023-11-06T06:39:34Z" duration-ms="14841" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- toolTip_MultiWindow_Lcoations -->
-      </class> <!-- seleniumpractice.MultipleWindows_ToolTip_Location_29 -->
+      </class> <!-- seleniumpractice.UploadFile_RobotClass_34 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
