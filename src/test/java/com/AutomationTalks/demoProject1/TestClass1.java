@@ -2,6 +2,7 @@ package com.AutomationTalks.demoProject1;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.HashMap;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.Platform;
@@ -25,6 +26,11 @@ public class TestClass1 {
 	
 	
 	public static WebDriver driver;
+	public static final String USERNAME = "sivaramsathianoo_BqLeg2";
+	public static final String AUTOMATEKEY = "7VJSmpkNPr94yUhYiaTV";
+	public static String test1 = "";
+	public static String test2 = "";
+	public static final String URL = "https://"+USERNAME+":"+AUTOMATEKEY+"@hub-cloud.browserstack.com/wd/hub";
 	
 	
 	@BeforeMethod
@@ -33,8 +39,18 @@ public class TestClass1 {
 //		dr = DesiredCapabilities.chrome();
 //		dr.setBrowserName("chrome");
 //		dr.setPlatform(Platform.LINUX);
-		System.setProperty("webdriver.chrome.driver", "C:\\Tonik\\Siva\\chromedriver\\chromedriver.exe");
-		driver = new ChromeDriver();
+		DesiredCapabilities capabilities = new DesiredCapabilities();
+		capabilities.setCapability("browserName", "Chrome");
+		//HashMap<String, Object> browserstackOptions = new HashMap<String, Object>();
+		capabilities.setCapability("os", "Windows");
+		capabilities.setCapability("osVersion", "10");
+		capabilities.setCapability("browserVersion", "latest");
+		capabilities.setCapability("local", "false");
+		capabilities.setCapability("seleniumVersion", "3.14.0");
+		//capabilities.setCapability("bstack:options", browserstackOptions);
+		//System.setProperty("webdriver.chrome.driver", "C:\\Tonik\\Siva\\chromedriver\\chromedriver.exe");
+		//driver = new ChromeDriver();
+		driver = new RemoteWebDriver(new URL(URL), capabilities);
 		
 		//driver = new RemoteWebDriver(new URL("http://localhost:4446/wd/hub"), dr);
 		
@@ -65,13 +81,13 @@ public class TestClass1 {
 	public void quit(ITestResult result) throws JiraException {
 		driver.quit();
 		//if test case fails then log the defect in JIRA
-		if(result.getStatus() == ITestResult.FAILURE) {
-			
-			BasicCredentials creds = new BasicCredentials("admin", "admin");
-			JiraClient jira = new JiraClient("http://localhost:8081", creds);
-			Issue issueName = jira.createIssue("AUT", "Bug").field(Field.SUMMARY, result.getMethod().getMethodName() +"is failed due to: "+ result.getThrowable().toString()).field(Field.DESCRIPTION, "get the description").execute();
-			System.out.println("Issue is created in JIRA with issue key: "+issueName.getKey());
-		}
+//		if(result.getStatus() == ITestResult.FAILURE) {
+//			
+//			BasicCredentials creds = new BasicCredentials("admin", "admin");
+//			JiraClient jira = new JiraClient("http://localhost:8081", creds);
+//			Issue issueName = jira.createIssue("AUT", "Bug").field(Field.SUMMARY, result.getMethod().getMethodName() +"is failed due to: "+ result.getThrowable().toString()).field(Field.DESCRIPTION, "get the description").execute();
+//			System.out.println("Issue is created in JIRA with issue key: "+issueName.getKey());
+//		}
 		
 		
 		

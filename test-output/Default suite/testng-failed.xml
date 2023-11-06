@@ -3,14 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.AutomationTalks.demoProject1.TestClass1">
+      <class name="seleniumpractice.ScreenShot_28">
         <methods>
-          <include name="Test3"/>
-          <include name="quit"/>
-          <include name="Test2"/>
-          <include name="launchDriver"/>
+          <include name="screenShots"/>
         </methods>
-      </class> <!-- com.AutomationTalks.demoProject1.TestClass1 -->
+      </class> <!-- seleniumpractice.ScreenShot_28 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
